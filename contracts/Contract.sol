@@ -15,12 +15,12 @@ contract Contract {
         require(amount < balances[msg.sender], "Not enough funds");
         if (selection == 2) {
             balances[msg.sender] += amount;
-            emit(2, amount, balances[msg.sender]);
+            emit Result(2, amount, balances[msg.sender]);
         } else if (selection == 1) {
-            emit(1, amount, balances[msg.sender]);
+            emit Result(1, amount, balances[msg.sender]);
         } else {
             balances[msg.sender] -= amount;
-            emit(0, amount, balances[msg.sender]);
+            emit Result(0, amount, balances[msg.sender]);
         }
     }
 }
