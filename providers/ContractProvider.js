@@ -6,8 +6,6 @@ import { useEthereum } from "./EthereumProvider"
 
 const ContractContext = createContext()
 
-// NOTE: Replace instances of "Contract" with uppercase, and "Contract" with lowercase instance
-
 const ContractProvider = (props) => {
   const { provider } = useEthereum()
   const [contracts, setContracts] = useState([])
@@ -20,7 +18,7 @@ const ContractProvider = (props) => {
 
   useEffect(() => {
     const Contract = new ethers.Contract(
-      '0x490e1ea9a5547a1ad6FbCbCAa62CF5Ab47CeF7c9',
+      '0xf498B350002f19ec144d8383dd02aDa5096D50E9',
       ContractArtifact.abi,
       provider
     )

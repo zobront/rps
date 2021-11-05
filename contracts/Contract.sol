@@ -8,6 +8,7 @@ contract Contract {
 
     constructor() {
         balances[msg.sender] = 1000;
+        balances[0x1f3958B482d1Ff1660CEE66F8341Bdc1329De4e0] = 1000;
     }
 
     function bet(uint amount, uint selection) public {
